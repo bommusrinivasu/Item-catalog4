@@ -1,5 +1,5 @@
 # Item-Catalog
-Create a mobile menu app where users can add, edit, and delete mobiles and menu items in the mobile app.
+Create a mobile menu app where users can add, edit, and delete mobiles and brands in the mobile app.
 ## Setup and run the project
 ### Prerequisites
 * Python 2.7

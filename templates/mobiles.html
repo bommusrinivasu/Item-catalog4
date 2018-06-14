@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+
+<body>
+{% include "nav.html" %}
+{% include "flash.html" %}
+
+
+<div class="pane">
+<h1>Mobiles</h1>
+
+<a href="{{url_for('newMobile')}}" > <h3> Create a New Mobile </h3> </a>
+
+{% for mobile in mobiles %}
+
+
+
+<a href = "{{url_for('mobileMenu', mobile_id = mobile.id)}}"> <p>{{mobile.name}}</p></a>
+
+<p><a href = "{{url_for('editMobile',mobile_id = mobile.id)}}">Edit Mobile</a></p>
+
+<p> <a href = "{{url_for('deleteMobile',mobile_id = mobile.id)}}">Delete Mobile</a> </p>
+
+
+
+
+{% endfor %}
+
+</div>
+</body>
+
+</html>

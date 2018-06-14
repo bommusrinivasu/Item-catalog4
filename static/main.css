@@ -1,0 +1,39 @@
+body{ font-family: sans-serif;
+  background-image:url("https://bit.ly/2l3TDga");
+  }
+ h1, h2, h3, h4 {
+                  color:green;
+                 }
+h1, h2   { font-family: 'Georgia', serif; margin: 0; }
+h1       { border-bottom: 2px solid #eee; }
+h2       { font-size:2em; }
+
+p { color:orange;}
+
+a {text-decoration: none; color:#FFFFCC; font-size: .75em;}
+
+.pane {
+    position:absolute; 
+    left: 25%; 
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 5px; 
+    margin: 5px; 
+    border-color:yellow;
+    background-image:url("https://bit.ly/2JStvmn"); 
+    width:40%;
+    }
+.header {left:50%;
+         text-align: center;
+         }
+.name {width:50%;
+       display: inline-block; 
+       float: left;}
+.price {text-align: right;
+        width:50%;
+        float: right; }
+.editdeletepane{}
+
+.flash{
+ background: #cee5F5;
+ }

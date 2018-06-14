@@ -1,0 +1,31 @@
+<html>
+
+
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+	</head>
+
+<body>
+{% include "nav.html" %}
+{% include "flash.html" %}
+	
+<h1> Edit mobile </h1>
+<div class="pane">
+
+<form action="{{ url_for('editMobile',mobile_id = mobile.id)}}" method = 'post'>
+
+
+	<p>Name:</p>
+		<input type ='text' size='30' name='name' placeholder = '{{mobile.name }}'>
+
+
+<input type='submit' value='Edit'>
+
+
+<a href = '{{url_for('showMobiles')}}'> Cancel </a>
+
+</form>
+</div>
+</body>
+
+</html>

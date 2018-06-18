@@ -22,7 +22,7 @@ $ flask-env\scripts\activate
 ``
 $ Python database_setup.py  
  
-7.This command Initilize the database 
+  7.This command Initilize the database 
 ```
 8. Populate the database with some initial data with command
 ```

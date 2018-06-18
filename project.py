@@ -226,7 +226,7 @@ def newMobile():
     if 'username' not in login_session:
         return redirect('/login')
     if request.method == 'POST':
-        newMobile = Mobile(name=request.form['name'])
+        newMobile = Mobiles(name=request.form['name'])
         session.add(newMobile)
         session.commit()
         return redirect(url_for('showMobiles'))
@@ -292,7 +292,9 @@ def mobileMenu(mobile_id):
 def newMenuItem(mobile_id):
     if 'username' not in login_session:
         return redirect('/login')
-
+    if mobileToedit.user_id != login_session['user_id']:
+        return "<script>{alert('Unauthorized');}</script>"
+    else
         session = connect_to_database()
 
     if request.method == 'POST':
@@ -316,6 +318,8 @@ def newMenuItem(mobile_id):
 def editMenuItem(mobile_id, menu_id):
     if 'username' not in login_session:
         return redirect('/login')
+    if mobileToedit.user_id != login_session['user_id']:
+        return "<script>{alert('Unauthorized');}</script>"
     editedItem = session.query(MenuItem).filter_by(id=menu_id).one()
     if request.method == 'POST':
         if request.form['name']:
@@ -342,6 +346,8 @@ def editMenuItem(mobile_id, menu_id):
 def deleteMenuItem(mobile_id, menu_id):
     if 'username' not in login_session:
         return redirect('/login')
+    if mobileToDelete.user_id != login_session['user_id']:
+        return "<script>{alert('Unauthorized');}</script>"
     itemToDelete = session.query(MenuItem).filter_by(id=menu_id).one()
     if request.method == 'POST':
         session.delete(itemToDelete)

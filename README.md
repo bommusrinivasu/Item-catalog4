@@ -18,19 +18,11 @@ $ pip install virtualenv(for windows)
 ```
 $ flask-env\scripts\activate
 ```
-6. The flask will be activated then run`
-``
-$ Python database_setup.py  
- 
-  7.This command Initilize the database 
-```
-8. Populate the database with some initial data with command
-```
-$ Python menus.py
-```
-9. Launch application with command
-```
-$ Python project.py
-```
-10. Open the browser and go to http://localhost:5000
+Then run the application:
+
+`python application.py`
+
+After the last command you are able to browse the application at this URL:
+
+`http://localhost:5000/`
 
